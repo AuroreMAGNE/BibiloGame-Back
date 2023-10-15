@@ -18,7 +18,7 @@ Game.init({
   },
   picture_path: {
     type: DataTypes.TEXT,
-    allowNull: false
+    //allowNull: false
   }
 }, 
 {

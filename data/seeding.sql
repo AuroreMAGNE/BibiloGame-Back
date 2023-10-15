@@ -7,20 +7,14 @@ INSERT INTO "games" ("title","brand","description","picture_path") VALUES
 ('Epopée Magique - Magic Ball', 'Mattel Games', "Jeu coopératif ou chacun incarne un héro devant récupérer les joyaux sans croiser le chemin du dragon.", ''), 
 ('Dragomino', 'Blue Orange', "Vous avez été nommé «dresseur de dragon» et vous avez la chance de partir à leur rencontre sur une île mystérieuse. Mais vous n’êtes pas le seul dresseur envoyé sur ces terres. Qui de vous découvrira le plus de bébés dragons ?", '');
 
-/*INSERT INTO "ageCategories" ("label") VALUES
-(8),
-(7), 
-(5);
-*/ 
 
-INSERT INTO "gamesAgeCategories" ("agecategory_id","game_id") VALUES
+INSERT INTO "ageCategories" ("label") VALUES
 ('0-3 ans'),
 ('3-6 ans'),
 ('6-10 ans'), 
-('+de 10 ans'); 
+('10 ans et plus'); 
 
 INSERT INTO "categories" ("label") VALUES
-('Tous'),
 ('Carte'),
 ('Stratégie'),
 ('Lettre'),
@@ -28,6 +22,16 @@ INSERT INTO "categories" ("label") VALUES
 ('Adresse'), 
 ('Coopératif'),
 ('Ambiance');
+
+/*INSERT INTO "gamesAgeCategories" ("agecategory_id","game_id") VALUES
+(2, 0),
+(3, 0),
+(2, 1),
+(3, 1),
+(1, 2),
+(2, 2),
+(3, 2)*/
+
 
 /*INSERT INTO "gamesCategories" ("category_id","game_id") VALUES
 ('?'),

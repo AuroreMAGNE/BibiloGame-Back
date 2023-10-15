@@ -12,5 +12,6 @@ Game.belongsToMany(AgeCategory, {through:'gamesAgeCategories'});
 User.belongsToMany(Game, {through:'comments'});
 Game.belongsToMany(User, {through:'comments'});
 
+
 export default {AgeCategory,Category,Game,User};
 
