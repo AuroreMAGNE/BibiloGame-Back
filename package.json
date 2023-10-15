@@ -1,0 +1,25 @@
+{
+    "name": "bibliogame-back",
+    "version": "1.0.0",
+    "description": "Ludothèque",
+    "main": "app.js",
+    "type": "module",
+    "dependencies": {
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "pg": "^8.11.3",
+        "pg-hstore": "^2.3.4",
+        "sequelize": "^6.33.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.1",
+        "sequelize-cli": "^6.6.1"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js",
+        "dev": "npx nodemon"
+    },
+    "author": "Aurore Magne",
+    "license": "ISC"
+}
