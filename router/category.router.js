@@ -3,7 +3,7 @@ import categoryController from '../controller/category.controller.js';
 
 const categoryRouter = Router();
 
-categoryRouter.route('/category')
+categoryRouter.route('/categories')
     .get((req, res) => {
         categoryController.readAll(res);
     });
