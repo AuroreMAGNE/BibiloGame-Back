@@ -66,11 +66,59 @@ export default {
             await game.removeCategory(category);
             
             res.status(200);
-            res.send('Catégorie retirée au jeu');
+            res.send('Catégorie retirée du jeu');
         }catch(error){
             console.log(error);
             res.status(500)
             res.send(`Jeu ou catégorie non trouvé`);
+        }
+    }, 
+
+    addAgeCategory: async(idGame, idAgeCategory, res) => {
+        try{            
+            if(!idGame)                
+                throw new Error('id manquant');
+
+            let game = await Game.findByPk(idGame);
+            if (game == null)
+                throw new Error('Game non trouvé');    
+
+            let ageCategory = await AgeCategory.findByPk(idAgeCategory);
+            if (ageCategory == null)
+                throw new Error('CAtegory non trouvée');    
+
+            await game.addAgeCategory(ageCategory);
+            
+            res.status(200);
+            res.send('Catégorie age ajoutée au jeu');
+        }catch(error){
+            console.log(error);
+            res.status(500)
+            res.send(`Jeu ou catégorie age non trouvé`);
+        }
+    }, 
+
+    deleteAgeCategory: async(idGame, idAgeCategory, res) => {
+        try{            
+            if(!idGame)                
+                throw new Error('id manquant');
+
+            let game = await Game.findByPk(idGame);
+            if (game == null)
+                throw new Error('Game non trouvé');    
+
+            let ageCategory = await AgeCategory.findByPk(idAgeCategory);
+            if (ageCategory == null)
+                throw new Error('Category age non trouvée');    
+
+            await game.removeAgeCategory(ageCategory);
+            
+            res.status(200);
+            res.send('Catégorie age retirée du jeu');
+        }catch(error){
+            console.log(error);
+            res.status(500)
+            res.send(`Jeu ou catégorie age non trouvé`);
         }
     }, 
 

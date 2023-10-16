@@ -18,6 +18,16 @@ gameRouter.route('/game/:idGame/category/:idCategory')
         const {idGame, idCategory} = req.params; 
         gameController.deleteCategory(idGame, idCategory, res);
     });
+    
+    gameRouter.route('/game/:idGame/agecategory/:idAgeCategory')
+    .post((req, res) => {
+        const {idGame, idCategory} = req.params; 
+        gameController.addAgeCategory(idGame, idCategory, res);
+    })   
+    .delete((req, res) => {
+        const {idGame, idCategory} = req.params; 
+        gameController.deleteAgeCategory(idGame, idCategory, res);
+    });
 
 gameRouter.route('/game/:id')
     .get((req, res) => gameController.read(req.params.id, res))
